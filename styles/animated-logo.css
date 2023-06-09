@@ -1,0 +1,66 @@
+:root {
+  --logo-container-size: 225px;
+}
+
+@keyframes rotate-gear {
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animated-logo-container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: var(--logo-container-size);
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  /* background-color: yellow; */
+}
+
+.icon-on-gear img {
+  position: absolute;
+  left: 24.8%;
+  top: 27%;
+  height: 30%;
+  z-index: 2;
+  border-radius: 10px 10px;
+}
+
+.gear-one {
+  position: absolute;
+  left: 1%;
+  top: 2%;
+  height: 80%;
+  z-index: 1;
+}
+
+.gear-two { 
+  position: absolute;
+  height: 40%;
+  left: 45%;
+  top: 50%;
+}
+
+.gear-one > img {
+ animation: rotate-gear 90s linear 0s infinite;
+ height: 100%;
+}
+
+.gear-two > img {
+  animation: rotate-gear 30s linear 0s infinite reverse;
+  height: 100%;
+  
+}

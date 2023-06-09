@@ -1,0 +1,431 @@
+@import "./animated-logo.css"; /*TODO: export height and width to main css */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=IBM+Plex+Serif:ital,wght@0,500;1,300&family=Pathway+Gothic+One&family=Rajdhani:wght@600&family=Yanone+Kaffeesatz:wght@300&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* border: 1px dashed red; */
+}
+
+:root {
+  --section-gap: 120px;
+  --section-height: 500px;
+  --nav-height: 45px;
+}
+
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+}
+
+p,
+ul,
+li,
+a,
+h2,
+h3,
+i {
+  color: #000000;
+  margin: unset;
+  padding: unset;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+header {
+  height: var(--logo-container-size);
+}
+
+.title-and-slogan {
+  width: 70%;
+}
+
+.title-and-slogan,
+.title-and-slogan * {
+  position: relative;
+}
+
+.title {
+  width: 100%;
+  text-align: right;
+  padding-right: 10px;
+  top: 60px;
+  background-color: #2fe8e8;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  display: inline-block;
+}
+
+.slogan {
+  top: 70px;
+  margin-left: 20%;
+  /* border-radius: 15px 50% 50% 15px; */
+  background: linear-gradient(
+    90deg,
+    rgba(64, 224, 208, 0.764),
+    transparent 70%
+  );
+  line-height: 25px;
+  padding-left: 10px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1.2rem;
+}
+
+/* .header-shade {
+  position: absolute;
+  z-index: 3;
+  background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.368) 80%,
+        rgba(165, 42, 42, 0.368)
+    );
+  width: 100%;
+  height: 100%;
+} */
+
+/* TODO: Sticky at top of vh */
+nav {
+  position: sticky;
+  top: 0px;
+  z-index: 4;
+  /* background-color: azure; */
+}
+
+.nav-links-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  height: var(--nav-height);
+  width: min(70%, 800px);
+  margin: 0px auto;
+  background-color: #f6e1c5;
+}
+
+.nav-link {
+  text-shadow: 5px 5px 5px orange;
+  text-align: center;
+  transition-property: font-size;
+  transition-duration: 0.2s;
+}
+
+.nav-link:hover {
+  font-size: 1.7rem;
+}
+
+li {
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 1.25rem;
+}
+
+main {
+  position: relative;
+  height: auto;
+  width: 100%;
+  padding: 0% 5%;
+}
+
+section,
+.projects-placeholder {
+  margin-top: var(--section-gap);
+  padding-top: calc(var(--nav-height) + 10px);
+  border: 1px solid black;
+}
+
+section:first-of-type {
+  height: var(--section-height);
+}
+
+div.projects-placeholder {
+  height: calc(var(--section-height) + 65px);
+}
+
+#Intro .intro-container {
+  max-width: 515px;
+  margin-left: 20%;
+}
+
+#Intro .profile-picture {
+  object-fit: fill;
+  width: 300px;
+  aspect-ratio: 1.5 / 1;
+}
+
+.section-title {
+  background-color: rgb(144, 187, 226);
+  width: 275px;
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 500;
+  font-size: 1.52rem;
+}
+
+/* TODO: Slide from left */
+#Intro .section-title {
+  position: relative;
+  margin-left: auto;
+  top: 20px;
+  z-index: 2;
+  /* transition: margin-left 5s ease-in-out; */
+}
+
+/* TODO: Fade in */
+#Intro p {
+  padding-top: 20px;
+  margin-left: 40px;
+  margin-right: 15px;
+  padding: 20px 2px 0px 5px;
+  max-width: 460px;
+  height: min-content;
+  background-color: rgba(255, 192, 203, 0.775);
+  font-family: "Cormorant Garamond", serif;
+}
+
+#Intro p::first-line {
+  font-size: 1.2rem;
+}
+
+#Intro p::first-letter {
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+#Projects {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: min-content;
+  row-gap: 20px;
+  column-gap: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#Projects .project {
+  position: relative;
+  max-width: 400px;
+  min-width: 330px;
+  height: 350px;
+  justify-self: center;
+  /* background-color: beige; */
+}
+
+#Projects .section-heading {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+#Projects .section-title {
+  margin: 0 auto;
+}
+
+.project-image-container {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+#Projects .project-sample-image {
+  width: 100%;
+  height: 300px;
+  object-fit: fill;
+}
+
+.project .project-name {
+  position: absolute;
+  background-color: rgb(238, 188, 196);
+  width: 200px;
+  left: 20px;
+  top: -15px;
+  box-shadow: rgba(245, 125, 225, 0.726) -5px 5px 10px;
+  border-radius: 0px 5px 5px 0px;
+  padding-left: 5px;
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.project-1 {
+  background-color: rgba(183, 150, 211, 0.65);
+  margin-top: 100px;
+}
+
+.project-2 {
+  margin-top: 20px;
+  background-color: rgba(206, 158, 158, 0.65);
+}
+
+.project-3 {
+  background-color: rgba(230, 233, 189, 0.65);
+  margin-top: 50px;
+}
+
+/* TODO: 1. Change color and make more appealing
+         2. Add highlights when hovering links. Projects get a bit smaller and project tile comes down a bit 
+         3. Add Code en to contacts list*/
+#Contact {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#Contact h2 {
+  text-align: right;
+  margin-left: 80px;
+  padding-right: 5px;
+  padding-bottom: 20px;
+}
+
+#Contact ul {
+  position: relative;
+  top: -20px;
+  left: 100px;
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #b7d0c9;
+  padding: 0px 10px;
+}
+
+#Contact li {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100px;
+  text-align: center;
+}
+
+#Contact .icon {
+  font-size: 5rem;
+  /* box-shadow: 0px 0px 40px #524a59; */
+  border-radius: 5px;
+  background-color: transparent;
+  transition-property: font-size;
+  transition-duration: 0.3s;
+}
+
+#Contact .icon:hover {
+  transition-property: font-size;
+  transition-duration: 0.3s;
+  font-size: 5.5rem;
+}
+
+#Contact p {
+  opacity: 0.5;
+}
+
+.contact-details {
+  margin-bottom: var(--section-gap);
+}
+
+@media only screen and (max-width: 1023px) {
+  :root {
+    --logo-container-size: 225px;
+  }
+
+  .projects-placeholder {
+    display: none;
+  }
+
+  #Projects {
+    position: initial;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-3 {
+    margin-top: 40px;
+    right: 90px;
+    grid-column-start: 2;
+  }
+
+  .contact-details {
+    margin-bottom: calc(var(--section-gap) / 2);
+  }
+
+  #Contact .icon {
+    font-size: 3rem;
+  }
+
+  #Contact .icon:hover {
+    font-size: 3.5rem;
+  }
+
+  #Contact ul {
+    padding: 0px 5px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  :root {
+    --logo-container-size: 200px;
+  }
+
+  #Contact ul {
+    position: unset;
+  }
+
+  #Contact h2 {
+    margin-left: unset;
+    position: relative;
+    top: 15px;
+    right: 20px;
+    z-index: -1;
+  }
+
+  .title-and-slogan * {
+    top: unset;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  :root {
+    --logo-container-size: 150px;
+    --section-gap: 100px;
+  }
+
+  .title {
+    background: linear-gradient(45deg, white 20%, #2fe8e8);
+    margin: unset;
+    padding-bottom: calc(var(--logo-container-size) - 30px);
+    top: 35px;
+    font-size: 2.2rem;
+  }
+
+  .slogan {
+    position: absolute;
+    top: 90px;
+  }
+
+  #Projects {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+  }
+
+  .project {
+    margin: unset;
+  }
+
+  .project-3 {
+    grid-column-start: unset;
+    right: unset;
+  }
+
+  #Intro .intro-container {
+    margin-left: unset;
+  }
+
+  #Contact ul {
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 500px){
+  /* TODO */
+}
