@@ -19,6 +19,7 @@ html {
   margin: 0px;
   padding: 0px;
   scroll-behavior: smooth;
+  min-width: 250px;
 }
 
 p,
@@ -151,13 +152,13 @@ div.projects-placeholder {
 
 #Intro .profile-picture {
   object-fit: fill;
-  width: 300px;
+  width: min(100%, 300px);
   aspect-ratio: 1.5 / 1;
 }
 
 .section-title {
   background-color: rgb(144, 187, 226);
-  width: 275px;
+  max-width: min(275px, 90%);
   font-family: "IBM Plex Serif", serif;
   font-weight: 500;
   font-size: 1.52rem;
@@ -179,7 +180,7 @@ div.projects-placeholder {
   margin-right: 15px;
   padding: 20px 2px 0px 5px;
   max-width: 460px;
-  height: min-content;
+  height: fit-content;
   background-color: rgba(255, 192, 203, 0.775);
   font-family: "Cormorant Garamond", serif;
 }
@@ -425,7 +426,44 @@ div.projects-placeholder {
   }
 }
 
+@media only screen and (max-width: 500px) {
+  :root {
+    --section-gap: 50px;
+  }
 
-@media only screen and (max-width: 500px){
-  /* TODO */
+  .title-and-slogan {
+    width: 100%;
+  }
+
+  .title {
+    top: unset;
+    text-align: initial;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+
+  .nav-links-list {
+    width: 100%;
+  }
+
+  .animated-logo-container * {
+    opacity: 0.5;
+  }
+
+  .nav-link:hover {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: unset;
+  }
+
+  #Intro p {
+    margin-left: unset;
+    margin-right: unset;
+  }
+
+  #Projects .project {
+    min-width: 240px;
+  }
 }
