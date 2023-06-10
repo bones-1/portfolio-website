@@ -1,17 +1,17 @@
 @import "./animated-logo.css"; /*TODO: export height and width to main css */
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=IBM+Plex+Serif:ital,wght@0,500;1,300&family=Pathway+Gothic+One&family=Rajdhani:wght@600&family=Yanone+Kaffeesatz:wght@300&display=swap");
 
+:root {
+  --section-gap: 120px;
+  --section-height: 500px;
+  --nav-height: 45px;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   /* border: 1px dashed red; */
-}
-
-:root {
-  --section-gap: 120px;
-  --section-height: 500px;
-  --nav-height: 45px;
 }
 
 body,
@@ -50,15 +50,13 @@ header {
 }
 
 .title {
-  width: 100%;
   text-align: right;
   padding-right: 10px;
   top: 60px;
   background-color: #2fe8e8;
   font-family: "Rajdhani", sans-serif;
   font-weight: 600;
-  font-size: 2.5rem;
-  display: inline-block;
+  font-size: clamp(1.8rem, 5vw + 1rem, 2.5rem);
 }
 
 .slogan {
@@ -73,7 +71,7 @@ header {
   line-height: 25px;
   padding-left: 10px;
   font-family: "Yanone Kaffeesatz", sans-serif;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw + .5rem, 1.2rem);
 }
 
 /* .header-shade {
@@ -161,7 +159,7 @@ div.projects-placeholder {
   max-width: min(275px, 90%);
   font-family: "IBM Plex Serif", serif;
   font-weight: 500;
-  font-size: 1.52rem;
+  font-size: clamp(1.2rem, 3vw + .5rem, 1.52rem);
 }
 
 /* TODO: Slide from left */
@@ -249,6 +247,7 @@ div.projects-placeholder {
   font-family: "IBM Plex Serif", serif;
   font-weight: 300;
   font-style: italic;
+  font-size: clamp( 1rem, 2.5vw + .5rem, 1.2rem)
 }
 
 .project-1 {
@@ -395,7 +394,7 @@ div.projects-placeholder {
     margin: unset;
     padding-bottom: calc(var(--logo-container-size) - 30px);
     top: 35px;
-    font-size: 2.2rem;
+    /* font-size: 2.2rem; */
   }
 
   .slogan {
@@ -438,16 +437,27 @@ div.projects-placeholder {
   .title {
     top: unset;
     text-align: initial;
-    padding-top: 20px;
-    padding-left: 20px;
+   padding: 20px 5px 120px;
   }
 
+  .slogan {
+    margin-left: unset;
+	background: linear-gradient( 90deg, transparent 40%, rgba(64, 224, 208, 0.764), transparent 80% );
+  font-style: italic;
+  text-shadow: #000000 5px 5px 5px;
+}
+
+  
   .nav-links-list {
     width: 100%;
   }
 
+  .nav-link:hover {
+  font-size: 1.1rem;
+}
+
   .animated-logo-container * {
-    opacity: 0.5;
+    opacity: 0.4;
   }
 
   .nav-link:hover {
@@ -463,7 +473,15 @@ div.projects-placeholder {
     margin-right: unset;
   }
 
+  #Projects {
+    row-gap: 30px;
+  }
+
   #Projects .project {
     min-width: 240px;
   }
+.project .project-name {
+  box-shadow: rgba(243, 224, 240, 0.73) -5px 5px 10px;
+}
+
 }
