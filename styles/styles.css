@@ -1,4 +1,3 @@
-@import "./main-fonts.css";
 @import "./animated-logo.css";
 
 :root {
@@ -18,8 +17,13 @@ body,
 html {
   margin: 0px;
   padding: 0px;
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1525px;
   scroll-behavior: smooth;
-  width: clamp(250px, 99.9vw, 1525px);
 }
 
 p,
