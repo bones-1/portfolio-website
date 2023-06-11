@@ -35,6 +35,7 @@
   left: 24.8%;
   top: 27%;
   height: 30%;
+  width: 30%;
   z-index: 2;
   border-radius: 10px 10px;
 }
@@ -44,12 +45,14 @@
   left: 1%;
   top: 2%;
   height: 80%;
+  width: 80%;
   z-index: 1;
 }
 
 .gear-two { 
   position: absolute;
   height: 40%;
+  width: 40%;
   left: 45%;
   top: 50%;
 }
