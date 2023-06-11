@@ -1,6 +1,5 @@
+@import "./main-fonts.css";
 @import "./animated-logo.css";
-/* @import "./banner.css"; */
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=IBM+Plex+Serif:ital,wght@0,500;1,300&family=Pathway+Gothic+One&family=Rajdhani:wght@600&family=Yanone+Kaffeesatz:wght@300&display=swap");
 
 :root {
   --section-gap: 120px;

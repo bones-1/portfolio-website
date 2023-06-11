@@ -1,0 +1,60 @@
+/* ibm-plex-serif-300 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "IBM Plex Serif";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/ibm-plex-serif-v19-latin-300.woff2") format("woff2"),
+    url("../fonts/ibm-plex-serif-v19-latin-300.ttf") format("truetype");
+}
+
+/* ibm-plex-serif-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "IBM Plex Serif";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/ibm-plex-serif-v19-latin-500.woff2") format("woff2"),
+    url("../fonts/ibm-plex-serif-v19-latin-500.ttf") format("truetype");
+}
+
+/* pathway-gothic-one-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Pathway Gothic One";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/pathway-gothic-one-v15-latin-regular.woff2")
+      format("woff2"),
+    url("../fonts/pathway-gothic-one-v15-latin-regular.ttf") format("truetype");
+}
+
+/* cormorant-garamond-300 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/cormorant-garamond-v16-latin-300.woff2") format("woff2"),
+    url("../fonts/cormorant-garamond-v16-latin-300.ttf") format("truetype");
+}
+
+/* rajdhani-300 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/rajdhani-v15-latin-300.woff2") format("woff2"),
+    url("../fonts/rajdhani-v15-latin-300.ttf") format("truetype");
+}
+
+/* yanone-kaffeesatz-300 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/yanone-kaffeesatz-v24-latin-300.woff2') format('woff2'), 
+       url('../fonts/yanone-kaffeesatz-v24-latin-300.ttf') format('truetype'); 
+}
