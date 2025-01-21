@@ -86,7 +86,7 @@ nav {
 
 .nav-links-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
   height: var(--nav-height);
   width: min(70%, 800px);
@@ -102,7 +102,7 @@ nav {
 }
 
 .nav-link:hover {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
 }
 
 li {
