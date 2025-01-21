@@ -9,7 +9,7 @@
       name="description"
       content="Introducing Douglas Campbell, your Frontend Web Developer."
     />
-    <link rel="stylesheet" href="./styles/main-fonts.css">
+    <link rel="stylesheet" href="./styles/main-fonts.css" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link
       rel="apple-touch-icon"
@@ -30,10 +30,10 @@
     />
     <link rel="manifest" href="./site.webmanifest" />
     <title>Douglas Campbell | Portfolio</title>
-</style>
   </head>
 
   <body>
+    <!-- Header -->
     <header>
       <div class="title-and-slogan">
         <h1 class="title">DOUGLAS CAMPBELL</h1>
@@ -54,15 +54,23 @@
         <span class="left"></span><span class="right"></span>
       </div>
     </header>
+
+    <!-- Navigation bar -->
+    <!-- TODO: Fix spacing issue -->
     <nav>
       <ul class="nav-links-list">
-        <li class="nav-link"><a href="#Intro">About Me</a></li>
-        <li class="nav-link"><a href="#Projects">Projects</a></li>
+        <li class="nav-link"><a href="#about-me">About Me</a></li>
+        <li class="nav-link">
+          <a href="#customer-support">Customer Support</a>
+        </li>
+        <li class="nav-link"><a href="#web-development">Web Development</a></li>
         <li class="nav-link"><a href="#Contact">Contact Me</a></li>
       </ul>
     </nav>
+
+    <!-- Main webpage -->
     <main>
-      <section id="Intro">
+      <section id="about-me">
         <article class="intro-container">
           <img
             src="images/gallery/sample-profile-picture.webp"
@@ -81,10 +89,51 @@
           </p>
         </article>
       </section>
-      <!-- Have background with theatre curtains -->
-      <section id="Projects">
+
+      <!-- Customer Support section -->
+      <section id="customer-support">
         <div class="section-heading">
-          <h2 class="section-title">Projects</h2>
+          <h2 class="section-title">Customer Support</h2>
+        </div>
+        <article class="project project-1">
+          <h3 class="project-name">Survey Page</h3>
+          <div class="project-image-container">
+            <a href="https://codepen.io/bones-0-o/full/PoxYYpN/" target="_blank"
+              ><img
+                src="./images/gallery/survey-form.webp"
+                alt="Sample image of project"
+                class="project-sample-image"
+            /></a>
+          </div>
+        </article>
+        <article class="project project-2">
+          <h3 class="project-name">Tribute</h3>
+          <div class="project-image-container">
+            <a href="https://codepen.io/bones-0-o/full/abQooYM" target="_blank"
+              ><img
+                src="./images/gallery/tribute-page.webp"
+                alt="Sample image of project"
+                class="project-sample-image"
+            /></a>
+          </div>
+        </article>
+        <article class="project project-3">
+          <h3 class="project-name">Product Landing Page</h3>
+          <div class="project-image-container">
+            <a href="https://codepen.io/bones-0-o/full/mdQbbKE" target="_blank"
+              ><img
+                src="./images/gallery/landing-page.webp"
+                alt="Sample image of project"
+                class="project-sample-image"
+            /></a>
+          </div>
+        </article>
+      </section>
+      <!-- Web development section -->
+      <!-- TODO: Have background with theatre curtains -->
+      <section id="web-development">
+        <div class="section-heading">
+          <h2 class="section-title">Web Development</h2>
         </div>
         <article class="project project-1">
           <h3 class="project-name">Survey Page</h3>
@@ -121,6 +170,9 @@
         </article>
       </section>
       <div class="projects-placeholder"></div>
+
+      <!-- Contacts section -->
+      <!-- TODO: Update contact details -->
       <section id="Contact">
         <h2 class="section-title">Let us work together</h2>
         <div class="contact-details">
